@@ -8,6 +8,7 @@
             font-family: sans-serif;
             margin: 2rem auto;
             max-width: 960px;
+            background: #ffffff;
             color: #1f2933;
         }
         h1, h2 {
@@ -28,6 +29,8 @@
         input {
             width: 100%;
             box-sizing: border-box;
+            background: #ffffff;
+            color: #1f2933;
         }
         table {
             border-collapse: collapse;
@@ -58,7 +61,7 @@
 <form class="add-form" th:action="@{/add}" method="post">
     <input type="text" name="firstName" placeholder="Имя" required>
     <input type="text" name="lastName" placeholder="Фамилия" required>
-    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="email" placeholder="Email" required>
     <button type="submit">Добавить</button>
 </form>
 
@@ -83,7 +86,7 @@
                    th:attr="form=${'edit-' + user.id}">
         </td>
         <td>
-            <input type="email" name="email" th:value="${user.email}" required
+            <input type="text" name="email" th:value="${user.email}" required
                    th:attr="form=${'edit-' + user.id}">
         </td>
         <td>
